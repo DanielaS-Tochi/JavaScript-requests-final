@@ -23,12 +23,12 @@ export default function construyeCard(titulo, descripcion, url, imagen) {
 
 
 async function listaVideos() {
-    try{
+    try {
         const listaAPI = await conectaAPI.listaVideos();
         listaAPI.forEach(element => lista
             .appendChild(construyeCard(element.titulo, element.descripcion, element.url, element.imagen)));
-    }catch{
-        lista.innerHTML=`<h2 class="mensaje__titulo">No fue posible cargar la lista de videos</h2>`;
+    } catch {
+        lista.innerHTML = `<h2 class="mensaje__titulo">No fue posible cargar la lista de videos</h2>`;
     }
 }
 
